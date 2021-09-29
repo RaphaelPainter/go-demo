@@ -1,0 +1,7 @@
+To launch
+
+go run <file>.go
+go build <file>.go
+
+Paho (brocker client): https://www.alibabacloud.com/help/doc-detail/146503.htm
+go get github.com/eclipse/paho.mqtt.golang
