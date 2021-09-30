@@ -1,1 +1,0 @@
-go buid cmd/main.go

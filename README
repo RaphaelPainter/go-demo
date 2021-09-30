@@ -4,9 +4,8 @@ go get github.com/eclipse/paho.mqtt.golang
 
 ----------------
 
-BROKER STANDBY
-mosquitto.exe -v
 
 SUB/PUB EXECUTION
 go run cmd/main.go
 
+https://github.com/IMT-Atlantique-FIL-2020-2023/NADA-Project-Extended
