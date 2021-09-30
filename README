@@ -1,11 +1,10 @@
-PAHO (brocker client): https://www.alibabacloud.com/help/doc-detail/146503.htm
-go get github.com/eclipse/paho.mqtt.golang
-
-
 ----------------
 
 
 SUB/PUB EXECUTION
-go run cmd/main.go
+go run mosquittoClient/subscriber.go
+
+InfluxDBClient
+go run influxDBclient/influxDBClient.go
 
 https://github.com/IMT-Atlantique-FIL-2020-2023/NADA-Project-Extended
