@@ -16,7 +16,7 @@ func createClientOptions(brokerURI string, clientId string) *mqtt.ClientOptions 
 	opts.AddBroker(brokerURI)
 	// opts.SetUsername(user)
 	// opts.SetPassword(password)
-	fmt.Println("INFO - Client options connected")
+	fmt.Println("INFO - Client options created")
 	opts.SetClientID(clientId)
 	return opts
 }
