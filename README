@@ -1,10 +1,9 @@
 ----------------
 
+mosquitto -v
 
-SUB/PUB EXECUTION
-go run mosquittoClient/subscriber.go
+go run influxDB_client.go
 
-InfluxDBClient
-go run influxDBclient/influxDBClient.go
+go run mosquitto_client.go
 
 https://github.com/IMT-Atlantique-FIL-2020-2023/NADA-Project-Extended

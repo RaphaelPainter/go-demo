@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"math"
+	"su/helloworld/influxDB"
 	"time"
 
 	mqtt "github.com/eclipse/paho.mqtt.golang"
@@ -23,7 +23,7 @@ func createClientOptions(brokerURI string, clientId string) *mqtt.ClientOptions 
 
 func connect(brokerURI string, clientId string) mqtt.Client {
 
-	fmt.Println("Trying to connect (" + brokerURI + ", " + clientId + ")...")
+	fmt.Println("INFO - Trying to connect (" + brokerURI + ", " + clientId + ")...")
 	opts := createClientOptions(brokerURI, clientId)
 	client := mqtt.NewClient(opts)
 	token := client.Connect()
@@ -40,8 +40,9 @@ func connect(brokerURI string, clientId string) mqtt.Client {
 }
 
 func main() {
-	math.Round(5)
 	fmt.Println("INFO - start main")
 	client := connect("tcp://localhost:1883", "my-client-id")
 	client.Publish("a/b/#", 0, false, "my great message")
+	influxDB.Insert()
+	fmt.Println("INFO - end main")
 }
